@@ -59,7 +59,7 @@ export const FEATURES = [
   {
     title: "Challenge a Friend",
     description: "Send them into the fire. Friendship is optional.",
-    status: "soon" as const,
+    status: "live" as const,
   },
   {
     title: "Compare Two Accounts",

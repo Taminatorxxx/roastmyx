@@ -40,6 +40,7 @@ export function ShareActions({ result, cardRef }: ShareActionsProps) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
+      // fallback
       const ta = document.createElement("textarea");
       ta.value = text;
       document.body.appendChild(ta);
@@ -66,6 +67,7 @@ export function ShareActions({ result, cardRef }: ShareActionsProps) {
       link.click();
     } catch (err) {
       console.error("PNG export failed", err);
+      // Fallback: open OG image
       const og = `/api/og?username=${encodeURIComponent(username)}&score=${result.analysis.scores.overall}&quote=${encodeURIComponent(result.analysis.roastQuote)}&archetype=${encodeURIComponent(result.analysis.archetype)}&badge=${encodeURIComponent(result.analysis.badge)}&avatar=${encodeURIComponent(result.profile.profileImageUrl)}&s1=${result.analysis.scores.hook}&s2=${result.analysis.scores.content}&s3=${result.analysis.scores.personalBrand}`;
       window.open(og, "_blank");
     } finally {

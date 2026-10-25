@@ -124,6 +124,7 @@ export async function fetchXProfile(
       );
       tweets = mapTweets(timeline.data);
     } catch {
+      // Profile-only is still useful for roasting
       tweets = [];
     }
 
@@ -151,6 +152,7 @@ export async function fetchXProfile(
 
     return { profile, isDemo: false };
   } catch (error) {
+    // Graceful fallback so the product still works without paid X access
     if (process.env.ALLOW_DEMO_FALLBACK !== "false") {
       console.warn(
         "[x-api] Falling back to demo profile:",

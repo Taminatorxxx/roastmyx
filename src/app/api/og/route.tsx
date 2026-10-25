@@ -45,6 +45,7 @@ export async function GET(request: NextRequest) {
           position: "relative",
         }}
       >
+        {/* Glow orbs */}
         <div
           style={{
             position: "absolute",
@@ -72,6 +73,7 @@ export async function GET(request: NextRequest) {
           }}
         />
 
+        {/* Header */}
         <div
           style={{
             display: "flex",
@@ -123,6 +125,7 @@ export async function GET(request: NextRequest) {
           </div>
         </div>
 
+        {/* Main card */}
         <div
           style={{
             display: "flex",
@@ -134,6 +137,7 @@ export async function GET(request: NextRequest) {
             gap: 36,
           }}
         >
+          {/* Left: avatar + identity */}
           <div
             style={{
               display: "flex",
@@ -199,6 +203,7 @@ export async function GET(request: NextRequest) {
             </div>
           </div>
 
+          {/* Right: score + quote */}
           <div
             style={{
               display: "flex",
@@ -267,6 +272,7 @@ export async function GET(request: NextRequest) {
               </div>
             </div>
 
+            {/* Mini scores */}
             <div style={{ display: "flex", gap: 16, marginTop: 24 }}>
               {[
                 { label: l1, value: s1 },
@@ -297,6 +303,7 @@ export async function GET(request: NextRequest) {
           </div>
         </div>
 
+        {/* Footer */}
         <div
           style={{
             display: "flex",

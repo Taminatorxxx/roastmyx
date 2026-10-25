@@ -8,6 +8,7 @@ import { Badge } from "./ui/badge";
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden px-4 pb-16 pt-28 sm:px-6 sm:pt-36">
+      {/* Background glows */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-0 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-rose-600/20 blur-[120px]" />
         <div className="absolute right-0 top-40 h-[320px] w-[320px] rounded-full bg-orange-500/15 blur-[100px]" />

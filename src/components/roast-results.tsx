@@ -86,6 +86,7 @@ export function RoastResults({ result }: RoastResultsProps) {
         )}
       </div>
 
+      {/* Hero identity + score */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -158,6 +159,7 @@ export function RoastResults({ result }: RoastResultsProps) {
         </div>
       </motion.section>
 
+      {/* Share actions */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -167,6 +169,7 @@ export function RoastResults({ result }: RoastResultsProps) {
         <ShareActions result={result} cardRef={cardRef} />
       </motion.div>
 
+      {/* Scores */}
       <section className="mb-8">
         <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
           <Zap className="h-5 w-5 text-orange-400" />
@@ -175,6 +178,7 @@ export function RoastResults({ result }: RoastResultsProps) {
         <ScoreGrid scores={analysis.scores} />
       </section>
 
+      {/* Narrative roast */}
       <SectionCard
         icon={<Flame className="h-4 w-4 text-orange-400" />}
         title="The full roast"
@@ -247,6 +251,7 @@ export function RoastResults({ result }: RoastResultsProps) {
         </div>
       </div>
 
+      {/* Share card + download zone */}
       <section className="mt-12">
         <h2 className="mb-4 text-lg font-semibold text-white">
           Your share card
@@ -276,6 +281,7 @@ export function RoastResults({ result }: RoastResultsProps) {
         </div>
       </section>
 
+      {/* Roast another */}
       <section className="mt-16 text-center">
         <h2 className="mb-2 text-xl font-bold text-white">
           Roast someone else

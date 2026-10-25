@@ -23,6 +23,7 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
             "radial-gradient(ellipse at 90% 10%, rgba(244,63,94,0.25), transparent 50%), radial-gradient(ellipse at 10% 90%, rgba(249,115,22,0.2), transparent 45%)",
         }}
       >
+        {/* Header */}
         <div className="mb-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-orange-500 to-rose-500 text-sm">
@@ -38,6 +39,7 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
           </div>
         </div>
 
+        {/* Profile row */}
         <div className="mb-4 flex items-center gap-3">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -67,6 +69,7 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
           </div>
         </div>
 
+        {/* Quote */}
         <div className="mb-4 rounded-2xl border border-white/10 bg-black/40 p-3.5">
           <div className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-orange-400">
             The roast
@@ -76,6 +79,7 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
           </p>
         </div>
 
+        {/* Mini scores */}
         <div className="mb-4 grid grid-cols-3 gap-2">
           {[
             { label: "Hook", value: scores.hook },
@@ -92,12 +96,14 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
           ))}
         </div>
 
+        {/* Stats strip */}
         <div className="mb-4 flex justify-between rounded-xl border border-white/5 bg-white/[0.03] px-3 py-2 text-[10px] text-zinc-500">
           <span>{formatNumber(profile.followersCount)} followers</span>
           <span>{formatNumber(profile.followingCount)} following</span>
           <span>{formatNumber(profile.tweetCount)} posts</span>
         </div>
 
+        {/* Footer / QR placeholder area */}
         <div className="flex items-center justify-between border-t border-white/10 pt-3">
           <div className="text-[11px] text-zinc-500">
             Get roasted free at
@@ -105,6 +111,7 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
             <span className="font-semibold text-zinc-300">{APP_DOMAIN}</span>
           </div>
           <div className="flex h-14 w-14 items-center justify-center rounded-lg border border-white/10 bg-white p-1">
+            {/* Simple QR-like pattern using CSS for offline export reliability */}
             <div
               className="grid h-full w-full grid-cols-5 grid-rows-5 gap-px"
               aria-hidden
