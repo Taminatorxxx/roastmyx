@@ -36,6 +36,7 @@ yarn-error.log*
 .vercel
 
 # local deploy helpers (never commit)
+full-deploy*.json
 .deploy-payload.json
 .deploy-files/
 deploy-*.json
